@@ -9,7 +9,7 @@
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
     "emulators": "firebase -P test-project emulators:start --only firestore",
-    "test": "FIRESTORE_EMULATOR_HOST=localhost:8080 GCLOUD_PROJECT=test-project firebase -P test-project emulators:exec --only firestore 'jest'"
+    "test": "FIRESTORE_EMULATOR_HOST=localhost:8080 GCLOUD_PROJECT=test-project firebase -P test-project emulators:exec --only firestore 'jest --detectOpenHandles'"
   },
   "engines": {
     "node": "12"
